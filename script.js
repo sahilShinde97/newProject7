@@ -188,10 +188,10 @@ gsap.to(imageSeq, {
   ease: `none`,
   scrollTrigger: {
     scrub: 0.15,
-    trigger: `#page`,
+    trigger: `#page>canvas`,
     //   set start end according to preference
     start: `top top`,
-    end: `600% top`,
+    end: `300% top`,
     scroller: `#main`,
   },
   onUpdate: render,
@@ -225,11 +225,11 @@ function scaleImage(img, ctx) {
 }
 ScrollTrigger.create({
 
-  trigger: "#page",// object you want to pin it.",
+  trigger: "#page>canvas",// object you want to pin it.",
   pin: true,
   // markers:true,
   scroller: `#main`,
 //   set start end according to preference
   start: `top top`,
-  end: `600% top`,
+  end: `300% top`,
 });
